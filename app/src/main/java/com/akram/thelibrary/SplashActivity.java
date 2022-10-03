@@ -1,11 +1,11 @@
 package com.akram.thelibrary;
 
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.akram.huaweihelper.HwHelper;
-import com.akram.huaweihelper.HwSplashView;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,7 +15,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        HwSplashView splashView = findViewById(R.id.splash_ad_view);
+        FrameLayout splashView = findViewById(R.id.splash_ad_view);
 
         HwHelper.install(
                 this,

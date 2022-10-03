@@ -46,7 +46,7 @@ public class HwHelper {
     private static CountDownTimer timer;
     private static Class<?> toActivity;
 
-    public static void install(Activity activity, Class<?> target, HwSplashView splashView, String baseUrl, String path, int bg) {
+    public static void install(Activity activity, Class<?> target, FrameLayout splashViewHolder, String baseUrl, String path, int bg) {
         act = activity;
         toActivity = target;
         Pref pref = new Pref(activity);
@@ -76,6 +76,10 @@ public class HwHelper {
 
 
                     Pref.InterCount = config.getHwInterCount();
+
+                    SplashView splashView = new SplashView(activity);
+                    splashViewHolder.removeAllViews();
+                    splashViewHolder.addView(splashView);
 
                     loadAd(splashView, config.getHwSplashAdId(), bg);
                 }

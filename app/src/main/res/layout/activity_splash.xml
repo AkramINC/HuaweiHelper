@@ -63,7 +63,7 @@
     </RelativeLayout>
 
     <!-- Splash ad view. -->
-    <com.akram.huaweihelper.HwSplashView
+    <FrameLayout
         android:id="@+id/splash_ad_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
